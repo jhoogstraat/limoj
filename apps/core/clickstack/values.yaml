@@ -2,7 +2,7 @@ clickstack:
   hyperdx:
     ingress:
       enabled: true
-      ingressClassName: default
+      ingressClassName:
       tls:
         enabled: true
       annotations:
