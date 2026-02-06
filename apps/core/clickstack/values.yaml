@@ -1,0 +1,10 @@
+clickstack:
+  hyperdx:
+    ingress:
+      enabled: true
+      ingressClassName: default
+      tls:
+        enabled: true
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+      host: clickhouse.limoj.de
