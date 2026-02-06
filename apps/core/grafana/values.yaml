@@ -1,0 +1,9 @@
+grafana:
+  grafana.ini:
+    server:
+      root_url: "grafana.limoj.de"
+
+  persistence:
+    enabled: true
+    size: 10Gi
+    storageClassName: local-path
