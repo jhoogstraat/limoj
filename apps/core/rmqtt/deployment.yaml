@@ -4,13 +4,7 @@ metadata:
   name: rmqtt
 spec:
   replicas: 1
-  selector:
-    matchLabels:
-      app: rmqtt # Must match commonLabels in kustomization.yaml
   template:
-    metadata:
-      labels:
-        app.kubernetes.io/name: rmqtt
     spec:
       containers:
         - name: rmqtt
