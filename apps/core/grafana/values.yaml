@@ -7,3 +7,14 @@ grafana:
     enabled: true
     size: 10Gi
     storageClassName: local-path
+
+  ingress:
+    enabled: true
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-staging
+    tls:
+      - hosts:
+          - grafana.limoj.de
+        secretName: grafana-tls
+    hosts:
+      - grafana.limoj.de
