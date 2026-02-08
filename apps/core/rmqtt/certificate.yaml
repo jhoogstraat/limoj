@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: rmqtt-tls
+  namespace: rmqtt
+spec:
+  secretName: rmqtt-tls
+  dnsNames:
+    - rmqtt.limoj.de
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer

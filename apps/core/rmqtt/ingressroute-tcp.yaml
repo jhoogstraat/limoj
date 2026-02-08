@@ -6,9 +6,11 @@ metadata:
 
 spec:
   entryPoints:
-    - web
+    - websecure
   routes:
-    - match: HostSNI(`*`)
+    - match: HostSNI(`rmqtt.limoj.de`)
       services:
         - name: rmqtt
           port: 1883
+      tls:
+        secretName: rmqtt-tls
