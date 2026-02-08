@@ -12,5 +12,5 @@ spec:
       services:
         - name: rmqtt
           port: 1883
-      tls:
-        secretName: rmqtt-tls
+  tls:
+    secretName: rmqtt-tls
