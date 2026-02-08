@@ -1,5 +1,6 @@
 clickstack:
   hyperdx:
+    frontendUrl: https://clickhouse.limoj.de
     ingress:
       enabled: true
       ingressClassName:
@@ -8,3 +9,5 @@ clickstack:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
       host: clickhouse.limoj.de
+      path: / # Traefik does not support the regex default in PathPrefix
+      pathType: Prefix
